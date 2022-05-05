@@ -3,9 +3,9 @@ plugins {
     id 'kotlin-android'
 }
 
-ext.variable_flavor = getGradle().getStartParameter().getTaskRequests().toString()
+ext.task_requests = getGradle().getStartParameter().getTaskRequests().toString()
 
-if (variable_flavor.contains('Huawei')) {
+if (task_requests.contains('Huawei')) {
     apply plugin: 'com.huawei.agconnect'
 }
 
