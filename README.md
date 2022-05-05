@@ -29,16 +29,16 @@ Product flavors with the same dimension are able to create additional yet separa
 A full setup can be seen in the app level `build.gradle` file, while the following part is most essential:
 
 ```
-    flavorDimensions 'oms'
+flavorDimensions 'oms'
 
-    productFlavors {
-        google {
-            dimension 'oms'
-        }
-        huawei {
-            dimension 'oms'
-        }
+productFlavors {
+    google {
+        dimension 'oms'
     }
+    huawei {
+        dimension 'oms'
+    }
+}
 ```
 
 ### Plugin Activation
@@ -60,9 +60,9 @@ Here it is really important to note the need of an upper case letter, otherwise 
 Dependencies can easily be added by writing the flavor name in front of the implementation keyword:
 
 ```
-    googleImplementation 'com.google.android.gms:play-services-base:18.0.1'
-    huaweiImplementation 'com.google.android.gms:play-services-base:18.0.1'
-    huaweiImplementation 'com.huawei.hms:base:6.4.0.303'
+googleImplementation 'com.google.android.gms:play-services-base:18.0.1'
+huaweiImplementation 'com.google.android.gms:play-services-base:18.0.1'
+huaweiImplementation 'com.huawei.hms:base:6.4.0.303'
 ```
 
 For the sake of this simple example, the Google Play Services dependency could have also been a single implementation, without a leading flavor keyword, but there might be cases where specific services should never be in another flavor and this shows how to account for that.
