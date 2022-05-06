@@ -3,12 +3,6 @@ plugins {
     id 'kotlin-android'
 }
 
-ext.task_requests = getGradle().getStartParameter().getTaskRequests().toString()
-
-if (task_requests.contains('Huawei')) {
-    apply plugin: 'com.huawei.agconnect'
-}
-
 android {
     compileSdk 31
 
@@ -40,6 +34,7 @@ android {
         }
         huawei {
             dimension 'oms'
+            apply plugin: 'com.huawei.agconnect'
         }
     }
 
