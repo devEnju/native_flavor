@@ -79,9 +79,9 @@ src\huawei\agconnect-services.json
 
 ### Wrapper Example
 
-To use code in the main project's source, a developer needs to provide the exact same interfaces for every created class inside a flavor. If this criteria is not met, one build variant might throw a compiler warning or error.
+To use flavor code in the main project's source, a developer needs to provide the exact same interfaces for every created class inside a flavor. If this criteria is not met, one build variant might throw a compiler warning or error.
 
-In a regular project, classes similar to `WrapperExample.kt` could wrap only used services with checking for API availability instead of the static function returning the flavor name and what service is used. There will be some unavoidable code duplication cases for GMS, because it has to be written in both flavors but once this pattern is setup correctly and kept throughout the project, the code should be easily able to be copied between them.
+In a regular project, classes similar to `WrapperExample.kt` could wrap only used services with checking for API availability instead of the static function returning the flavor name and what service is used. There will be some cases of unavoidable code duplication for GMS, because it has to be written in both flavors but once this pattern is set up correctly and kept throughout the project, the other flavors should easily be able to be adjusted for a clearer separation.
 
 
 ## Documentation Links
